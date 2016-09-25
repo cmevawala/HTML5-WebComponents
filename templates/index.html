@@ -1,0 +1,25 @@
+<!DOCTYPE>
+<html>
+
+<head>
+    <title>Template</title>
+</head>
+
+<body>
+    <template>
+        <p>Web <span class="noun"></span></p>
+        <!--<p>Web {{tagline}}</p>-->
+        <script>
+            alert("hello");
+        </script>
+    </template>
+    <script>
+        var template = document.querySelector('template');
+        var content = document.importNode(template.content, true);
+        content.querySelector('.noun').textContent = "Component";
+        // content.querySelector('tagline').textContent = "Web Component - Templates"; 
+        document.body.appendChild(content);
+    </script>
+</body>
+
+</html>

@@ -1,0 +1,48 @@
+<!DOCTYPE>
+<html>
+<head>
+    <title>Custom Elements</title>
+    <script src="./customelements.js"></script>
+    <script src="./extendedcustomelements.js"></script>
+</head>
+<body>
+    <!-- Option 1 -->
+    <!--<pluralsight-comment></pluralsight-comment>-->
+    
+    <!-- Extended Elements: Option 1 -->
+    <!--<button is="pluralsight-button"></button>-->
+
+    <script>
+
+        // <!-- Option 2 -->
+        // var comment = new PluralSightComment();
+        // document.body.appendChild(comment);
+
+        // <!-- Option 3 -->
+        // var comment = document.createElement('pluralsight-comment');
+        // document.body.appendChild(comment);
+
+        // <!-- Option 4 -->
+        // document.body.innerHTML = "<pluralsight-comment>";
+
+
+        <!-- Extended Elements: Option 2 -->
+        // var button = new PluralSightButton();
+        // document.body.appendChild(button);
+
+        <!-- Extended Elements: Option 3 -->
+        // var pluralSightButton = document.createElement('button', 'pluralsight-button');
+        // document.body.asppendChild(pluralSightButton);
+
+        <!-- Extended Elements: Option 4 -->
+        document.body.innerHTML = "<button is='pluralsight-button'>";
+
+        // LifeCycle Callbacks
+        // 1. Instance Created
+        // 2. Instance Attached
+        // 3. Detach Instance
+        // 4. attributeChange
+
+    </script>
+</body>
+</html>
