@@ -14,11 +14,20 @@
         </script>
     </template>
     <script>
+        // Step 1:
         var template = document.querySelector('template');
+        
+        // Step 2:
         var content = document.importNode(template.content, true);
+
+        // Step 3:
         content.querySelector('.noun').textContent = "Component";
-        // content.querySelector('tagline').textContent = "Web Component - Templates"; 
+        
+        // Step 4:
         document.body.appendChild(content);
+        
+        // Future
+        // content.querySelector('tagline').textContent = "Web Component - Templates"; 
     </script>
 </body>
 

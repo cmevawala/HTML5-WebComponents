@@ -1,0 +1,40 @@
+<!DOCTYPE>
+<html>
+
+<head>
+
+    <title>Shadow Dom Fundamentals</title>
+    <style>
+        h1 {
+            color: red;
+        }
+    </style>
+</head>
+
+<body>
+    <div id="host"></div>
+    <h1>Hello World From Light DOM</h1>
+</body>
+
+<template id="template">
+    <style>
+        h1 {
+            color: green;
+        }
+    </style>
+    <h1>Hello World From Shadow Dom</h1>
+</template>
+
+<script>
+    var template = document.querySelector('template');
+    var content = document.importNode(template.content, true); 
+
+    var host = document.getElementById('host');
+    var root = host.createShadowRoot();
+    
+    // root.innerHTML = "<h1>Hello World From Shadow Dom</h1>";
+    
+    root.appendChild(content); 
+</script>
+
+</html>
