@@ -1,0 +1,36 @@
+
+<!DOCTYPE html>
+<!--
+
+JavaScript is not supported in Shadow DOM Why?
+Adding the import tag on a page will load only require assests for that html. 
+Html in the bundle will be inert till it is activated.
+But in the bundle CSS, JS are executed immediatly
+Also to which elements the CSS and JS are applied
+
+ -->
+<html>
+
+<head>
+
+    <script>
+        var link = document.createElement('link');
+        link.rel = 'import';    
+        link.href = './dream-garage.html';
+        link.id = 'dream-garage';
+        document.head.appendChild(link);
+    </script>
+
+    <!--<link rel="import" href="dream-garage.html" id="dream-garage">-->
+</head>
+
+<body>
+    <script>
+        var content = document.querySelector("#dream-garage").import;
+        var carList = content.querySelector("ul");
+        document.body.appendChild(carList);
+    </script>
+
+</body>
+
+</html>
